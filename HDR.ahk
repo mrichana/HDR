@@ -1,6 +1,9 @@
 ﻿#Requires AutoHotkey v2.0
-if (A_Args.Length > 0 and A_Args[1] = "true")
+if (A_Args.Length > 1)
 {
-    Send "!#b"
+    if ((A_Args[1] = "false" and A_Args[2] = "true") or (A_Args[1] = "true" and A_Args[2] = "false")) 
+    {
+        Send "!#b"
+    }
 }
 
